@@ -1,8 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-
 ## The makeCacheMatrix function take an argument x as the input matrix, object 
 ## mi to cache the inverse matrix. 
 ## The set() assigns the input argument to the x object in the parent 
@@ -32,10 +27,16 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The function cacheSolve() first attempts to retrieve a inverse matrix from the 
+## object passed in as the argument.if the value is not equal to NULL, the 
+## function returns a valid, cached inverse matrix to the parent environment.
+## If the result of !is.null(m) is FALSE, cacheSolve() gets the matrix from the 
+## input object, calculates a solve(), uses the setInverse() function on the 
+## input object to set the inverse matrix in the input object, and then returns 
+## the value of the inverse matrix to the parent environment by printing the 
+## inverse matrix object.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
         ## Return a matrix that is the inverse of 'x'
         mi <- x$getInverse()
         if(!is.null(mi)) {
